@@ -55,7 +55,7 @@ const create = (url: string, path: string) => {
         const stream = fs.createReadStream(join(process.cwd(), 'repo.zip'));
         extract(stream, process.cwd())
           .then(() => {
-            fs.rename(`${process.cwd()}/vite-react-main`, `${process.cwd()}/${args[0]}`, (err) => {
+            fs.rename(`${process.cwd()}/vite-svelte-main`, `${process.cwd()}/${args[0]}`, (err) => {
               if (err) reject(err)
               resolve()
             })
